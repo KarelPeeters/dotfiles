@@ -1,0 +1,44 @@
+[user]
+        name = Karel Peeters
+        email = karel.peeters.leuven@gmail.com
+[alias]
+        s = status
+        f = fetch --all
+        g = !git graph
+        graph = log --graph --abbrev-commit --decorate --oneline --branches --remotes --tags HEAD
+        fg = !git f && git g
+        fs = !git f && git s
+        unstage = reset HEAD --
+        detach = checkout --detach HEAD
+        pff = pull --ff-only
+        mff = merge --ff-only
+        amend = commit --amend
+        uncommit = reset --soft HEAD~
+        cp = cherry-pick
+        cm = commit -m
+        ca = commit --amend
+        mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+        h = stash
+        sub = submodule update --init --recursive
+[status]
+        showStash = true
+[core]
+        excludesfile = ~/.gitignore
+	autocrlf = input
+[advice]
+        detachedHead = false
+[merge]
+        ff = false
+[pull]
+        ff = only
+[push]
+	autoSetupRemote = true
+[sequence]
+	editor = rebase-editor
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
