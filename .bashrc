@@ -51,5 +51,7 @@ alias l="ls -la"
 alias rf="readlink -f"
 alias rgm="rg --multiline --multiline-dotall"
 
+alias zel="zellij"
+
 # alias completion
 complete -F _complete_alias "${!BASH_ALIASES[@]}"
