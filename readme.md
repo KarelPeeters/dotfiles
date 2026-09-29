@@ -9,10 +9,6 @@ My personal cross-machine dotfiles.
         if [ -f ~/dotfiles/.bashrc ]; then
             source ~/dotfiles/.bashrc
         fi;
-        if [ -f ~/dotfiles/zellij/config.kdl ]; then
-            ZELLIJ_CONFIG_FILE=~/dotfiles/zellij/config.kdl
-            export ZELLIJ_CONFIG_FILE
-        fi;
         ```
     * In `~/.bash_completion`:
         ```bash
@@ -24,8 +20,4 @@ My personal cross-machine dotfiles.
         ```
         [include]
         path=~/dotfiles/.gitconfig
-        ```
-    * In `~/.config/zellij/config.kdl`
-        ```
-
         ```

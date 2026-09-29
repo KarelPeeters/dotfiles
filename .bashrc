@@ -5,8 +5,12 @@ if [ -x "$(which fzf)" ] ; then
     eval "$(fzf --bash)"
 fi
 
+# setup zellij config file
+ZELLIJ_CONFIG_FILE=~/dotfiles/zellij/config.kdl
+export ZELLIJ_CONFIG_FILE
+
 # change shell prompt to include nonzero exit codes, based on https://stackoverflow.com/a/16715681
-PROMPT_COMMAND=__prompt_command    # Function to generate PS1 after CMDs
+PROMPT_COMMAND=__prompt_command
 PS1_COPY=$PS1
 __prompt_command() {
     local EXIT="$?"
