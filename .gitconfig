@@ -4,6 +4,7 @@
 [alias]
         s = status
         f = fetch --all
+        fp = fetch --all --prune
         g = !git graph
         graph = log --graph --abbrev-commit --decorate --oneline --branches --remotes --tags HEAD
         fg = !git f && git g
