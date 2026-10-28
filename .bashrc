@@ -49,6 +49,7 @@ alias gca="git ca"
 alias gch="git checkout"
 alias gus="git unstage"
 alias gh="git stash"
+alias github="/usr/bin/gh"
 
 alias l="ls -la"
 

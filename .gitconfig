@@ -6,7 +6,9 @@
         f = fetch --all
         fp = fetch --all --prune
         g = !git graph
+        gl = !git graph-local
         graph = log --graph --abbrev-commit --decorate --oneline --branches --remotes --tags HEAD
+        graph-local = log --graph --abbrev-commit --decorate --oneline HEAD
         fg = !git f && git g
         fs = !git f && git s
         unstage = reset HEAD --
@@ -26,7 +28,7 @@
         showStash = true
 [core]
         excludesfile = ~/.gitignore
-	autocrlf = input
+        autocrlf = input
 [advice]
         detachedHead = false
 [merge]
@@ -34,13 +36,13 @@
 [pull]
         ff = only
 [push]
-	autoSetupRemote = true
+        autoSetupRemote = true
 [sequence]
-	editor = rebase-editor
+        editor = rebase-editor
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
 [init]
-	defaultBranch = main
+        defaultBranch = main
