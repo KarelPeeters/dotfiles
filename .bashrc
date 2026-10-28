@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # setup fzf history search
-if [ -x "$(which fzf)" ] ; then
+if [ -x "$(which fzf 2> /dev/null)" ] ; then
     eval "$(fzf --bash)"
 fi
 
